@@ -17,5 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('inico','index');
+Route::view('master','master');
 Route::view('login','login');
+Route::view('estado-alumnos','estado');
+Route::view('lista-alumnos','lista');

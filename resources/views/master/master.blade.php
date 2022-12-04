@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio</title>
+  <title>@yield('titulo')</title>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/styles.css" />
@@ -53,18 +53,18 @@
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="#asistencia" class="nav__link active-link">Asisitencia</a>
+            <a href="{ url('asis')}" class="nav__link active-link">Asisitencia</a>
           </li>
           <li class="nav__item">
-            <a href="#estado" class="nav__link">Estado</a>
+            <a href="{ url('estado')}" class="nav__link">Estado</a>
           </li>
           <li class="nav__item">
             <a href="#alumnos" class="nav__link">Alumnos</a>
           </li>
           <li class="nav__item">
-            <a href="#profesores" class="nav__link">Profesores</a>
+            <a href="{url('Lista')}" class="nav__link">Profesores</a>
           </li>
-          <a href="#" class="button button--ghost">Iniciar sesion</a>
+          <a href="{ url('login')}" class="button button--ghost">Iniciar sesion</a>
         </ul>
         <div class="nav__close" id="nav-close">
           <i class="bx bx-x"></i>
@@ -78,11 +78,11 @@
   <!-- #endregion -->
   <!-- #region Principal-->
   <main class="main">
-
+  @yield('contenido')
   </main>
   <!--Pie de pagina-->
 
-
+  @stack('scripts')
   <!--Scroll para que se revelen los elementos de forma suave-->
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
   <script type="text/javascript" src="js/vue-resource.js"></script>

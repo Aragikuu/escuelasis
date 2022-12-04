@@ -1,3 +1,6 @@
+@extends('view.master')
+@section('titulo','Asistencia')
+@section('contenido')
 <div class="container">
     <pre></pre>
     <div class="card">
@@ -33,3 +36,7 @@
         </div>
     </div>
 </div>
+@endsection
+@push('scripts')
+<script type="text/javascript" src="js/apis/asis.js"></script>
+@endpush
